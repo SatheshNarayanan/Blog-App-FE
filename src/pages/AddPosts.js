@@ -121,8 +121,10 @@ const AddPosts = () => {
             valid={title.isValid === "valid" ? true : false}
             invalid={title.isValid === "invalid" ? true : false}
           />
-          <FormGroup>
-            <Label for="authors">Select</Label>
+          <FormFeedback>Title must atleast contain 10 characters</FormFeedback>
+        </FormGroup>
+    <FormGroup>
+            <Label for="authors">Author</Label>
             <Input
               type="select"
               name="authors"
@@ -138,8 +140,6 @@ const AddPosts = () => {
               })}
             </Input>
           </FormGroup>
-          <FormFeedback>Title must atleast contain 10 characters</FormFeedback>
-        </FormGroup>
         <FormGroup>
           <Label for="content">Content </Label>
           <Input
